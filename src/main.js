@@ -24,7 +24,7 @@ import ExpeditionsOverview from './views/ExpeditionsOverview';
         //collections
         let artworksCollection = new Artworks();
         let paintersCollection  = new Painters();
-        let expeditionsCollection = new Expeditions();
+        let expeditionsCollection = new Expeditions(null, { date: '2017-06-23' });
 
         //views
         new ErrorView({el: "#errorMessage"});
@@ -34,7 +34,7 @@ import ExpeditionsOverview from './views/ExpeditionsOverview';
         new PainterSelector ({el: "#PainterSelector", collection: paintersCollection});
         new ExpeditionsOverview ({el: "#ExpeditionsOverview", collection: expeditionsCollection});
 
-        Backbone.history.start({pushState: true, root: '/ArtworksApp'});
+        Backbone.history.start({pushState: true, root: '/0896910/ArtworksApp'});
 
     };
 
